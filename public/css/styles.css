@@ -1,0 +1,281 @@
+/* Custom styles for the Inter font and a NEW refined color palette */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FBFDFF;
+    /* Even lighter, cleaner background */
+    color: #1F2937;
+    /* Dark slate gray for main text - excellent readability */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NEW Custom refined blue & accent palette for ultimate luxury */
+/* Primary: Sophisticated Midnight Blue */
+.text-easwari-prime {
+    color: #2C3E50;
+}
+
+.bg-easwari-prime {
+    background-color: #2C3E50;
+}
+
+.border-easwari-prime {
+    border-color: #2C3E50;
+}
+
+.hover\:bg-easwari-prime-dark:hover {
+    background-color: #233140;
+}
+
+/* Accent: Vibrant & Quick-Attracting Sky Blue */
+.text-easwari-accent {
+    color: #6CB6F5;
+}
+
+.bg-easwari-accent {
+    background-color: #6CB6F5;
+}
+
+.border-easwari-accent {
+    border-color: #6CB6F5;
+}
+
+.hover\:bg-easwari-accent-dark:hover {
+    background-color: #5BA1E0;
+}
+
+/* NEW Gradient for Hero and Call to Action - combining Midnight Blue and Sky Blue */
+.bg-gradient-easwari {
+    background-image: linear-gradient(to right, #2C3E50, #6CB6F5);
+}
+
+.bg-gradient-light-easwari {
+    background-image: linear-gradient(to right, #FBFDFF, #EBF3F8);
+    /* Lighter gradient for cards */
+}
+
+/* Focus styles for interactive elements - using vibrant Sky Blue */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #6CB6F5;
+    /* Vibrant Sky Blue for focus */
+    outline-offset: 4px;
+    /* More prominent outline */
+    border-color: transparent;
+    /* Hide default border on focus */
+    border-radius: 12px;
+    /* Match rounded corners of elements */
+    box-shadow: 0 0 0 4px rgba(108, 182, 245, 0.3);
+    /* Subtle outer glow */
+}
+
+/* Card design with enhanced shadow and 3D transition */
+.service-card {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Initial elegant shadow */
+    perspective: 1000px;
+    /* For 3D transform */
+    border: 1px solid #E2E8F0;
+    /* Subtle border for definition */
+}
+
+.service-card:hover {
+    transform: translateY(-15px) rotateX(2deg);
+    /* More pronounced lift and perspective */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    /* Deeper, wider shadow on hover */
+}
+
+/* General section shadows for depth */
+.section-depth {
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Animation classes for scroll reveal */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Larger initial translate for more dramatic reveal */
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Slower, smoother transition */
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero specific animations */
+.hero-title {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSlideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    /* Slower hero animation */
+}
+
+.hero-tagline {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSlideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+    /* Delayed */
+}
+
+.hero-button {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSlideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s forwards;
+    /* Further delayed */
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header shrink/shadow on scroll */
+.header-scrolled {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* More intense shadow on scroll */
+    transition: all 0.3s ease-in-out;
+}
+
+/* NEW: Button hover background sweep */
+.button-sweep:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    /* Light overlay for sweep effect */
+    transition: all 0.4s ease;
+    transform-origin: left;
+}
+
+.button-sweep:hover:after {
+    width: 100%;
+    transform: translateX(100%);
+}
+
+.button-sweep span {
+    position: relative;
+    z-index: 2;
+    /* Keep text above sweep effect */
+}
+
+/* Optional subtle background pattern for hero */
+.hero-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34.200785V42h-4v-8.033663C31.285642 33.729124 30.298816 33.62688 29.351299 33.649669 28.397686 33.672704 27.420658 33.793798 26.47164 34.020583 25.530364 34.245087 24.629392 34.56708 23.778817 34.980645 22.921319 35.397262 22.127885 35.908077 21.408796 36.505703 20.672322 37.100918 20 37.785002 19.349692 38.544716 18.679163 39.308253 18 40.106518 17.387994 40.925528 16.732924 41.761928 16.03759 42.607421 15.26786 43.435773 14.397834 44.204558 13.486828 44.89679 12.54562 45.471467 11.58309 45.918974 10.606352 46.216393 9.610515 46.34863 8.601004 46.309324 7.575971 46.096336 6.550604 45.71077 5.539828 45.155734 4.550186 44.437976 3.597147 43.568472 2.706176 42.56948 1.88451 41.446864 1.135064 40.20786 0.460144 38.859664 0 37.411628 0 35.872084 0 34.258385 0 32.58784 0 30.87034 0 29.117188 0 27.32049 0 25.480287 0 23.606716 0 21.700147 0 19.761066 0 17.789932 0 15.78726 0 13.753556 0 11.68931 0 9.594098 0 7.468494 0 5.312984 0 3.128125 0 0.914441 0 0h24v-4H0V0h24v34.200785L24 0zM42 34.200785V42h-4v-8.033663C37.285642 33.729124 36.298816 33.62688 35.351299 33.649669 34.397686 33.672704 33.420658 33.793798 32.47164 34.020583 31.530364 34.245087 30.629392 34.56708 29.778817 34.980645 28.921319 35.397262 28.127885 35.908077 27.408796 36.505703 26.672322 37.100918 26 37.785002 25.349692 38.544716 24.679163 39.308253 24 40.106518 23.387994 40.925528 22.732924 41.761928 22.03759 42.607421 21.26786 43.435773 20.397834 44.204558 19.486828 44.89679 18.54562 45.471467 17.58309 45.918974 16.606352 46.216393 15.610515 46.34863 14.601004 46.309324 13.575971 46.096336 12.550604 45.71077 11.539828 45.155734 10.550186 44.437976 9.597147 43.568472 8.706176 42.56948 7.88451 41.446864 7.135064 40.20786 6.460144 38.859664 6 37.411628 6 35.872084 6 34.258385 6 32.58784 6 30.87034 6 29.117188 6 27.32049 6 25.480287 6 23.606716 6 21.700147 6 19.761066 6 17.789932 6 15.78726 6 13.753556 6 11.68931 6 9.594098 6 7.468494 6 5.312984 6 3.128125 6 0.914441 6 0h24v-4H6V0h24v34.200785L30 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60px 60px;
+    opacity: 0.05;
+}
+
+/* --- PERFORMANCE & ACCESSIBILITY OPTIMIZATIONS --- */
+
+/* GPU Acceleration for smoother animations */
+.service-card,
+.testimonial-card,
+.hero-title,
+.hero-tagline,
+.hero-button {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Reduce Motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .hero-title,
+    .hero-tagline,
+    .hero-button {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Professional Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2C3E50 0%, #1a252f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(108, 182, 245, 0.3);
+    border-top: 4px solid #6CB6F5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6CB6F5;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2C3E50;
+}

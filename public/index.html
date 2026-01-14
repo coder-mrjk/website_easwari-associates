@@ -1,604 +1,884 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EASWARI ASSOCIATES - Here Trust Meets Tireless Precision</title>
 
-        <!-- Google tag (gtag.js) -->
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://embed.tawk.to">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N3Q9S75N');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQ3QZHVJ8Q"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-SQ3QZHVJ8Q'); // Your GA4 Measurement ID
+        gtag('config', 'G-SQ3QZHVJ8Q'); // Your GA4 Measurement ID
     </script>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for the Inter font and a NEW refined color palette */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FBFDFF; /* Even lighter, cleaner background */
-            color: #1F2937; /* Dark slate gray for main text - excellent readability */
-        }
-        html {
-            scroll-behavior: smooth;
-        }
 
-        /* NEW Custom refined blue & accent palette for ultimate luxury */
-        /* Primary: Sophisticated Midnight Blue */
-        .text-easwari-prime { color: #2C3E50; }
-        .bg-easwari-prime { background-color: #2C3E50; }
-        .border-easwari-prime { border-color: #2C3E50; }
-        .hover\:bg-easwari-prime-dark:hover { background-color: #233140; }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 
-        /* Accent: Vibrant & Quick-Attracting Sky Blue */
-        .text-easwari-accent { color: #6CB6F5; }
-        .bg-easwari-accent { background-color: #6CB6F5; }
-        .border-easwari-accent { border-color: #6CB6F5; }
-        .hover\:bg-easwari-accent-dark:hover { background-color: #5BA1E0; }
+    <!-- Interaction & Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
 
-        /* NEW Gradient for Hero and Call to Action - combining Midnight Blue and Sky Blue */
-        .bg-gradient-easwari {
-            background-image: linear-gradient(to right, #2C3E50, #6CB6F5);
-        }
-        .bg-gradient-light-easwari {
-            background-image: linear-gradient(to right, #FBFDFF, #EBF3F8); /* Lighter gradient for cards */
-        }
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-        /* Focus styles for interactive elements - using vibrant Sky Blue */
-        button:focus, a:focus, input:focus, textarea:focus, select:focus {
-            outline: 3px solid #6CB6F5; /* Vibrant Sky Blue for focus */
-            outline-offset: 4px; /* More prominent outline */
-            border-color: transparent; /* Hide default border on focus */
-            border-radius: 12px; /* Match rounded corners of elements */
-            box-shadow: 0 0 0 4px rgba(108, 182, 245, 0.3); /* Subtle outer glow */
-        }
+    <!-- SEO & Meta Tags -->
+    <meta name="description"
+        content="Easwari Associates: Premier Audit, Tax Advisory & Business Consulting Firm in Pallipalayam. 20+ Years of Experience in GST, IT Filing, and Financial Planning.">
+    <meta name="keywords"
+        content="Auditor Pallipalayam, Tax Consultant Erode, GST Filing, Income Tax Returns, Easwari Associates, Business Registration, Financial Advisor Tamil Nadu">
+    <meta name="author" content="Easwari Associates">
+    <meta name="theme-color" content="#2C3E50"> <!-- Mobile browser theme color -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="canonical" href="https://office-website-696ce.web.app/"> <!-- Replace with actual URL when live -->
 
-        /* Card design with enhanced shadow and 3D transition */
-        .service-card {
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Initial elegant shadow */
-            perspective: 1000px; /* For 3D transform */
-            border: 1px solid #E2E8F0; /* Subtle border for definition */
-        }
-        .service-card:hover {
-            transform: translateY(-15px) rotateX(2deg); /* More pronounced lift and perspective */
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2); /* Deeper, wider shadow on hover */
-        }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://office-website-696ce.web.app/">
+    <meta property="og:title" content="EASWARI ASSOCIATES - Trusted Financial Consultants">
+    <meta property="og:description"
+        content="Where Trust Meets Tireless Precision. Expert Audit, Tax, and Business services in Pallipalayam.">
+    <meta property="og:image" content="https://office-website-696ce.web.app/og-image.png">
 
-        /* General section shadows for depth */
-        .section-depth {
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
-        }
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://office-website-696ce.web.app/">
+    <meta property="twitter:title" content="EASWARI ASSOCIATES - Trusted Financial Consultants">
+    <meta property="twitter:description" content="Expert Audit, Tax, and Business services in Pallipalayam.">
+    <meta property="twitter:image" content="https://office-website-696ce.web.app/og-image.png">
 
-        /* Animation classes for scroll reveal */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px); /* Larger initial translate for more dramatic reveal */
-            transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Slower, smoother transition */
-            will-change: opacity, transform;
+    <!-- JSON-LD Schema for Local Business (CRITICAL FOR GOOGLE MAPS/SEARCH) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      "name": "Easwari Associates",
+      "image": "https://office-website-696ce.web.app/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "23/1, Canara Bank 1st Floor, Sangakiri Main Road",
+        "addressLocality": "Pallipalayam",
+        "postalCode": "638006",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.35, 
+        "longitude": 77.73 
+      },
+      "url": "https://office-website-696ce.web.app/",
+      "telephone": ["+91 98941 32998", "+91 93809 75940"],
+      "email": ["auditorppm24@gmail.com", "easwariassociates@gmail.com"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
         }
-        .animate-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
+      ],
+      "priceRange": "₹₹",
+      "founder": {
+        "@type": "Person",
+        "name": "Mr. P. Sadasivam"
+      },
+      "alumni": [
+        {
+            "@type": "Person",
+            "name": "Mr. P.S. Tamilselvam"
+        },
+        {
+            "@type": "Person",
+            "name": "Mr. P.S. ChandraSekaran"
         }
+      ]
+    }
+    </script>
+</head>
 
-        /* Hero specific animations */
-        .hero-title {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInSlideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; /* Slower hero animation */
-        }
-        .hero-tagline {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInSlideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards; /* Delayed */
-        }
-        .hero-button {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInSlideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s forwards; /* Further delayed */
-        }
+<body class="antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3Q9S75N" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-        @keyframes fadeInSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+    <!-- Professional Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Wrapper for site content fade-in -->
+    <div id="site-content" class="opacity-0 transition-opacity duration-700 ease-in-out">
+
+
+        <!-- Header Section -->
+        <header id="main-header"
+            class="bg-white/90 backdrop-blur-md shadow-lg py-6 sticky top-0 z-50 section-depth transition-all duration-300 ease-in-out">
+            <nav class="container mx-auto flex justify-between items-center px-8 md:px-12">
+                <!-- Logo Placeholder -->
+                <div class="text-3xl md:text-4xl font-extrabold text-easwari-prime tracking-wide flex items-center">
+                    <!-- Placeholder for your actual logo SVG/Image -->
+                    <svg class="w-9 h-9 md:w-10 md:h-10 mr-4 text-easwari-accent" fill="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zM12 13a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                    </svg>
+                    EASWARI ASSOCIATES
+                </div>
+                <ul class="hidden md:flex space-x-12">
+                    <li><a href="#home"
+                            class="text-gray-700 hover:text-easwari-prime font-semibold text-xl py-2 transition duration-300 relative group">Home<span
+                                class="absolute bottom-0 left-0 w-full h-0.5 bg-easwari-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a>
+                    </li>
+                    <li><a href="#services"
+                            class="text-gray-700 hover:text-easwari-prime font-semibold text-xl py-2 transition duration-300 relative group">Services<span
+                                class="absolute bottom-0 left-0 w-full h-0.5 bg-easwari-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a>
+                    </li>
+                    <li><a href="#about"
+                            class="text-gray-700 hover:text-easwari-prime font-semibold text-xl py-2 transition duration-300 relative group">About
+                            Us<span
+                                class="absolute bottom-0 left-0 w-full h-0.5 bg-easwari-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-gray-700 hover:text-easwari-prime font-semibold text-xl py-2 transition duration-300 relative group">Contact
+                            Us<span
+                                class="absolute bottom-0 left-0 w-full h-0.5 bg-easwari-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a>
+                    </li>
+                </ul>
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button id="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false"
+                    class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-easwari-accent rounded-md p-3">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8"
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
+            </nav>
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl py-4 mt-2 mx-6 rounded-xl section-depth">
+                <ul class="flex flex-col space-y-4 px-8">
+                    <li><a href="#home"
+                            class="block text-gray-800 hover:bg-gray-100 rounded-md py-3 px-4 text-lg font-medium">Home</a>
+                    </li>
+                    <li><a href="#services"
+                            class="block text-gray-800 hover:bg-gray-100 rounded-md py-3 px-4 text-lg font-medium">Services</a>
+                    </li>
+                    <li><a href="#about"
+                            class="block text-gray-800 hover:bg-gray-100 rounded-md py-3 px-4 text-lg font-medium">About
+                            Us</a></li>
+                    <li><a href="#contact"
+                            class="block text-gray-800 hover:bg-gray-100 rounded-md py-3 px-4 text-lg font-medium">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="relative text-white py-40 md:py-64 rounded-b-[7rem] overflow-hidden">
+                <!-- 3D Background Container -->
+                <div id="hero-canvas" class="absolute inset-0 z-0 bg-easwari-prime"></div>
+
+                <div class="container mx-auto text-center px-8 relative z-10 pointer-events-none">
+                    <!-- content pointer-events-none to let click through to canvas if needed, but we usually want text selectable. Let's make button pointer-events-auto -->
+                    <div class="pointer-events-auto">
+                        <h1
+                            class="text-6xl md:text-8xl font-extrabold leading-tight mb-8 drop-shadow-2xl hero-title split-text-reveal">
+                            EASWARI ASSOCIATES
+                        </h1>
+                        <p class="text-2xl md:text-3xl mb-14 max-w-5xl mx-auto opacity-90 font-light hero-tagline">
+                            “Here Trust Meets Tireless Precision.”
+                        </p>
+                        <a href="#contact"
+                            class="hero-button bg-white text-easwari-prime hover:bg-gray-100 font-bold py-5 px-16 rounded-full shadow-2xl transition duration-500 ease-in-out transform hover:scale-105 inline-block text-2xl group relative overflow-hidden button-sweep">
+                            <span class="relative z-10">Schedule a Consultation Today</span>
+                            <span
+                                class="absolute inset-0 bg-easwari-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEW: Stats Section (The Beast Factor) -->
+            <section id="stats" class="relative -mt-20 z-20 px-8">
+                <div class="container mx-auto">
+                    <div
+                        class="bg-white rounded-3xl shadow-2xl p-10 grid grid-cols-1 md:grid-cols-4 gap-8 border border-gray-100 section-depth">
+                        <!-- Stat 1: Years -->
+                        <div class="text-center md:border-r border-gray-100 p-4">
+                            <div class="text-6xl font-extrabold text-easwari-prime mb-2 counter-value" data-target="20">
+                                0
+                            </div>
+                            <p class="text-gray-500 font-semibold tracking-wide uppercase text-sm">Years of Legacy</p>
+                        </div>
+                        <!-- Stat 2: Clients -->
+                        <div class="text-center md:border-r border-gray-100 p-4">
+                            <div class="text-6xl font-extrabold text-easwari-accent mb-2 counter-value"
+                                data-target="300">0
+                            </div>
+                            <p class="text-gray-500 font-semibold tracking-wide uppercase text-sm">Happy Customers</p>
+                        </div>
+                        <!-- Stat 3: Experts -->
+                        <div class="text-center md:border-r border-gray-100 p-4">
+                            <div class="text-6xl font-extrabold text-easwari-prime mb-2 counter-value" data-target="5">0
+                            </div>
+                            <p class="text-gray-500 font-semibold tracking-wide uppercase text-sm">Senior Experts</p>
+                        </div>
+                        <!-- Stat 4: Location -->
+                        <div class="text-center p-4">
+                            <div class="text-6xl font-extrabold text-easwari-accent mb-2">1</div>
+                            <p class="text-gray-500 font-semibold tracking-wide uppercase text-sm">Prime Location
+                                (Pallipalayam)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEW: Founders & Legacy Section -->
+            <section class="py-24 md:py-32 bg-gray-50 mt-16 mx-8 rounded-3xl">
+                <div class="container mx-auto px-8">
+                    <div class="text-center mb-16 animate-text">
+                        <span
+                            class="bg-easwari-accent/20 text-easwari-prime text-sm font-bold px-4 py-2 rounded-full mb-4 inline-block">The
+                            Pillars of Excellence</span>
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-easwari-prime mt-4">Our Leadership Heritage
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                        <!-- Founder Card -->
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-easwari-prime hover:shadow-2xl transition-shadow duration-300">
+                            <div
+                                class="h-24 w-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-2 border-easwari-prime">
+                                <svg class="w-full h-full text-gray-400 p-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-center text-easwari-prime">Mr. P. Sadasivam</h3>
+                            <p class="text-center text-easwari-accent font-semibold mb-4">Founder</p>
+                            <p class="text-center text-gray-600 italic">"The visionary who laid the foundation of trust
+                                and
+                                precision that defines us today."</p>
+                        </div>
+                        <!-- Current Leader 1 -->
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-easwari-accent transform md:-translate-y-4 hover:shadow-2xl transition-shadow duration-300">
+                            <div
+                                class="h-28 w-28 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-2 border-easwari-accent">
+                                <svg class="w-full h-full text-gray-400 p-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-center text-easwari-prime">Mr. P.S. Tamilselvam</h3>
+                            <p class="text-center text-easwari-accent font-semibold mb-4">Managing Partner</p>
+                            <p class="text-center text-gray-600">Carrying forward the legacy with 15+ years of expertise
+                                in
+                                advanced tax planning and corporate auditing.</p>
+                        </div>
+                        <!-- Current Leader 2 -->
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-easwari-accent hover:shadow-2xl transition-shadow duration-300">
+                            <div
+                                class="h-24 w-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-2 border-easwari-accent">
+                                <svg class="w-full h-full text-gray-400 p-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-center text-easwari-prime">Mr. P.S. ChandraSekaran</h3>
+                            <p class="text-center text-easwari-accent font-semibold mb-4">Senior Partner</p>
+                            <p class="text-center text-gray-600">A pillar of knowledge, specializing in regulatory
+                                compliance and strategic business consulting for over 15 years.</p>
+                        </div>
+                        <!-- New Expert: Shanthi S -->
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-easwari-prime hover:shadow-2xl transition-shadow duration-300">
+                            <div
+                                class="h-24 w-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-2 border-easwari-prime">
+                                <svg class="w-full h-full text-gray-400 p-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-center text-easwari-prime">Mrs. Shanthi S</h3>
+                            <p class="text-center text-easwari-accent font-semibold mb-4">LIC Insurance Expert</p>
+                            <p class="text-center text-gray-600">Dedicated to securing your future with over <span
+                                    class="font-bold">5 years</span> of specialized experience in LIC policies.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEW: Wall of Trust (Testimonials) -->
+            <section class="py-24 md:py-32 bg-white mx-8 lg:mx-auto max-w-screen-2xl">
+                <div class="container mx-auto px-8">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-center text-easwari-prime mb-16 animate-text">
+                        What
+                        Our 300+ Clients Say</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card p-10 rounded-2xl shadow-lg" data-tilt data-tilt-max="10">
+                            <div class="flex items-center mb-6">
+                                <div class="text-yellow-400 flex">★★★★★</div>
+                            </div>
+                            <p class="text-gray-700 text-lg italic mb-6">"Easwari Associates transformed how we handle
+                                our
+                                GST filings. Their precision saves us time and money every single month. Truly the best
+                                in
+                                Pallipalayam."</p>
+                            <p class="font-bold text-easwari-prime">- Rajesh K., Textile Manufacturer</p>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card p-10 rounded-2xl shadow-lg" data-tilt data-tilt-max="10">
+                            <div class="flex items-center mb-6">
+                                <div class="text-yellow-400 flex">★★★★★</div>
+                            </div>
+                            <p class="text-gray-700 text-lg italic mb-6">"I was lost with my tax planning until I met
+                                Mr.
+                                Tamilselvam. His advice was clear, legal, and highly effective. Highly recommended!"</p>
+                            <p class="font-bold text-easwari-prime">- Priya S., Small Business Owner</p>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card p-10 rounded-2xl shadow-lg" data-tilt data-tilt-max="10">
+                            <div class="flex items-center mb-6">
+                                <div class="text-yellow-400 flex">★★★★★</div>
+                            </div>
+                            <p class="text-gray-700 text-lg italic mb-6">"Professional, ethical, and always available.
+                                They
+                                handled our company incorporation and yearly audits seamlessly."</p>
+                            <p class="font-bold text-easwari-prime">- Anand M., Tech Startup</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services"
+                class="py-32 md:py-48 bg-white section-depth mt-24 rounded-3xl mx-8 lg:mx-auto max-w-screen-2xl">
+                <div class="container mx-auto px-8">
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-center text-easwari-prime mb-20 animate-text">
+                        Our
+                        Specialized Services</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+                        <!-- Cards will have data-tilt added via JS or manually here -->
+
+                        <!-- Service Card 1 -->
+                        <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20"
+                            data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.2">
+                            <div
+                                class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <line x1="10" y1="9" x2="10" y2="9"></line>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">
+                                Comprehensive
+                                Audit & Assurance</h3>
+                            <p class="text-gray-700 text-center leading-relaxed text-lg">
+                                Ensuring the absolute financial integrity and regulatory compliance of your enterprise
+                                through meticulous, independent auditing.
+                            </p>
+                        </div>
+
+                        <!-- Service Card 2 -->
+                        <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20"
+                            data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.2">
+                            <div
+                                class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5z"></path>
+                                    <polyline points="12 8 8 12 11 15 16 10 12 6"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Strategic
+                                Tax
+                                Advisory</h3>
+                            <p class="text-gray-700 text-center leading-relaxed text-lg">
+                                Navigate the complexities of taxation with our expert guidance. Proactive tax planning
+                                and
+                                meticulous preparation.
+                            </p>
+                        </div>
+
+                        <!-- Service Card 3 -->
+                        <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20"
+                            data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.2">
+                            <div
+                                class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 15h.01"></path>
+                                    <path d="M7 19h10"></path>
+                                    <path d="M22 17H2"></path>
+                                    <path d="M12 12V2L4 5v7c0 4.28 1.97 8.23 6.5 10C17 20.23 19 16.28 19 12V5l-8-3Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Business
+                                Consulting</h3>
+                            <p class="text-gray-700 text-center leading-relaxed text-lg">
+                                Unlock your business's full potential with our bespoke financial consulting. Strategic
+                                insights and actionable advice.
+                            </p>
+                        </div>
+
+                        <!-- Service Card 4 -->
+                        <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20"
+                            data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.2">
+                            <div
+                                class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <line x1="8" y1="9" x2="8" y2="9"></line>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Invoice &
+                                E-Way
+                                Bill</h3>
+                            <p class="text-gray-700 text-center leading-relaxed text-lg">
+                                Simplify your financial operations with our precise invoice and E-Way Bill management.
+                                Seamless processing.
+                            </p>
+                        </div>
+
+                        <!-- Service Card 5 -->
+                        <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20"
+                            data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.2">
+                            <div
+                                class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M5 12.55V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7.55">
+                                    </path>
+                                    <path d="M12 8v4l3 2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Tally &
+                                Winman
+                                Filings</h3>
+                            <p class="text-gray-700 text-center leading-relaxed text-lg">
+                                Expert handling of software-specific filings ensuring accurate, timely, and fully
+                                compliant
+                                submissions.
+                            </p>
+                        </div>
+
+                        <!-- Service Card 6 -->
+                        <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20"
+                            data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.2">
+                            <div
+                                class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Aadhaar &
+                                PAN
+                                Services</h3>
+                            <p class="text-gray-700 text-center leading-relaxed text-lg">
+                                Facilitating seamless Aadhaar and PAN services, including new applications and updates.
+                            </p>
+                        </div>
+
+                        <!-- Service Card 7 -->
+                        <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20 md:col-span-2 lg:col-span-1"
+                            data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.2">
+                            <div
+                                class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">LIC
+                                Insurance
+                                Advisory</h3>
+                            <p class="text-gray-700 text-center leading-relaxed text-lg">
+                                Secure your future with confident decisions. Expert advisory to help you choose optimal
+                                coverage.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us Section -->
+            <section id="about"
+                class="py-32 md:py-48 bg-gray-50 section-depth rounded-3xl mx-8 lg:mx-auto max-w-screen-2xl mt-24">
+                <div class="container mx-auto px-8 flex flex-col md:flex-row items-center gap-16">
+                    <div class="md:w-1/2 reveal-left">
+                        <!-- Image placeholder for professional office/team -->
+                        <img src="https://placehold.co/1000x750/2C3E50/6CB6F5?text=Strategic+Vision"
+                            alt="About Us - Strategic Vision"
+                            class="rounded-3xl shadow-xl w-full h-auto object-cover border-4 border-white transform hover:scale-[1.01] transition-transform duration-500 ease-in-out">
+                    </div>
+                    <div class="md:w-1/2 reveal-right">
+                        <h2 class="text-5xl md:text-6xl font-extrabold text-easwari-prime mb-10">About EASWARI
+                            ASSOCIATES
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed text-xl mb-6">
+                            At EASWARI ASSOCIATES, we embody our tagline: “Here Trust Meets Tireless Precision.” With
+                            over
+                            <span class="font-extrabold text-easwari-prime">20 years of dedicated experience</span>, our
+                            firm is founded on the principles of unwavering commitment, meticulous attention to detail,
+                            and
+                            a relentless pursuit of client success.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-xl">
+                            We believe in building lasting relationships through transparency and exceptional service,
+                            ensuring every client receives personalized and effective financial guidance.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action Section -->
+            <section
+                class="py-32 md:py-48 bg-gradient-easwari text-white text-center rounded-3xl mx-8 lg:mx-auto max-w-screen-2xl mt-24 section-depth relative overflow-hidden">
+                <!-- Vanta/Three.js effect can go here too if desired, minimal -->
+                <div class="container mx-auto px-8 relative z-10">
+                    <h2 class="text-5xl md:text-6xl font-extrabold mb-12 drop-shadow-2xl animate-text">
+                        Ready to Optimize Your Financial Future?
+                    </h2>
+                    <a href="#contact"
+                        class="bg-white text-easwari-prime hover:bg-gray-100 font-bold py-5 px-16 rounded-full shadow-2xl transition duration-500 ease-in-out transform hover:scale-105 inline-block text-2xl group relative overflow-hidden button-sweep">
+                        <span class="relative z-10">Connect With Our Experts</span>
+                        <span
+                            class="absolute inset-0 bg-easwari-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Contact Us Section -->
+            <section id="contact"
+                class="py-32 md:py-48 bg-white rounded-3xl mx-8 lg:mx-auto max-w-screen-2xl mt-24 section-depth mb-24">
+                <div class="container mx-auto px-8">
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-center text-easwari-prime mb-20 animate-text">
+                        Connect With EASWARI ASSOCIATES</h2>
+                    <div class="max-w-6xl mx-auto bg-gray-50 p-12 md:p-16 rounded-3xl shadow-xl border border-gray-100">
+                        <form id="contactForm" class="space-y-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <label for="name" class="block text-gray-800 text-xl font-medium mb-4">Your
+                                        Name</label>
+                                    <input type="text" id="name" name="name"
+                                        class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm placeholder-gray-500"
+                                        placeholder="e.g., Jane Doe" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-800 text-xl font-medium mb-4">Your
+                                        Email</label>
+                                    <input type="email" id="email" name="email"
+                                        class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm placeholder-gray-500"
+                                        placeholder="your.email@example.com" required>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <label for="phone" class="block text-gray-800 text-xl font-medium mb-4">Phone
+                                        Number</label>
+                                    <input type="tel" id="phone" name="phone"
+                                        class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm placeholder-gray-500"
+                                        placeholder="e.g., +91 98765 43210">
+                                </div>
+                                <div>
+                                    <label for="service" class="block text-gray-800 text-xl font-medium mb-4">Service of
+                                        Interest</label>
+                                    <select id="service" name="service"
+                                        class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm bg-white cursor-pointer">
+                                        <option value="">Select a Service</option>
+                                        <option value="audit">Comprehensive Audit & Assurance</option>
+                                        <option value="tax">Strategic Tax Advisory & Comprehensive Filings</option>
+                                        <option value="consulting">Business & Financial Consulting</option>
+                                        <option value="invoice-eway">Invoice & E-Way Bill Management</option>
+                                        <option value="software-filings">Software-Specific Filings (Tally & Winman)
+                                        </option>
+                                        <option value="aadhaar-pan">Aadhaar & PAN Services</option>
+                                        <option value="lic-insurance">LIC Insurance Advisory</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-800 text-xl font-medium mb-4">Your
+                                    Message</label>
+                                <textarea id="message" name="message" rows="6"
+                                    class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm placeholder-gray-500"
+                                    placeholder="Tell us about your specific financial needs or questions..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-easwari-prime text-white font-bold py-5 px-12 rounded-lg hover:bg-easwari-prime-dark transition duration-400 ease-in-out transform hover:scale-105 shadow-xl text-2xl group relative overflow-hidden button-sweep">
+                                <span class="relative z-10">Send Your Inquiry</span>
+                                <span
+                                    class="absolute inset-0 bg-easwari-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                            </button>
+                        </form>
+                        <div id="form-message" class="mt-12 text-center text-xl font-semibold hidden"></div>
+                    </div>
+
+                    <div class="mt-28 text-center">
+                        <p class="text-3xl text-gray-700 mb-10 font-medium">Or reach us directly via:</p>
+                        <div class="flex flex-col md:flex-row justify-center gap-10">
+                            <div class="text-3xl font-extrabold text-easwari-prime">
+                                <span class="block text-xl font-normal text-gray-500 mb-1">Phone</span>
+                                <a href="tel:+919894132998"
+                                    class="hover:text-easwari-accent transition-colors block">+91 98941 32998</a>
+                                <a href="tel:+919380975940"
+                                    class="hover:text-easwari-accent transition-colors block text-2xl font-bold mt-2">+91
+                                    93809 75940</a>
+                            </div>
+                            <div class="text-3xl font-extrabold text-easwari-prime">
+                                <span class="block text-xl font-normal text-gray-500 mb-1">Email</span>
+                                <a href="mailto:auditorppm24@gmail.com"
+                                    class="hover:text-easwari-accent transition-colors block text-2xl font-bold">auditorppm24@gmail.com</a>
+                                <a href="mailto:easwariassociates@gmail.com"
+                                    class="hover:text-easwari-accent transition-colors block text-2xl font-bold mt-1">easwariassociates@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <p class="text-2xl text-gray-600 mt-12 leading-relaxed max-w-3xl mx-auto border-t pt-10">
+                            <span class="font-bold text-gray-800">Visit Our Office:</span><br>
+                            23/1, Canara Bank 1st Floor, Sangakiri Main Road,<br>
+                            Pallipalayam - 638006, Tamil Nadu, India.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="bg-gray-900 text-white py-14 rounded-t-[7rem]">
+            <div class="container mx-auto text-center px-8">
+                <div class="mb-10 flex justify-center space-x-10">
+
+                </div>
+                <p class="text-gray-400 text-base md:text-lg leading-relaxed">&copy; 2025 EASWARI ASSOCIATES. All Rights
+                    Reserved. <span class="font-bold text-easwari-accent">Crafted with Unwavering Precision by Jai
+                        Synergiz
+                        Solutions.</span></p>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" aria-label="Back to top"
+            class="fixed bottom-8 right-8 bg-easwari-prime text-white p-4 rounded-full shadow-2xl opacity-0 invisible transition-all duration-300 hover:bg-easwari-accent hover:scale-110 z-40">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </button>
+
+    </div> <!-- End of site-content wrapper -->
+
+    <!-- Main Logic -->
+    <script src="js/main.js"></script>
+
+    <!-- Animation Initialization Script -->
+    <script>
+        // Initialize Lenis (Smooth Scroll)
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf);
+
+        // Fade in site content and hide preloader on load
+        window.addEventListener('load', () => {
+            // Hide preloader
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.add('hidden');
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            // Show site content
+            const siteContent = document.getElementById('site-content');
+            if (siteContent) {
+                setTimeout(() => {
+                    siteContent.classList.remove('opacity-0');
+                }, 100); // Small delay for smoother transition
             }
+        });
+
+        // Initialize Vanta.js (Net effect) for Hero - Optimized for Performance
+        try {
+            if (typeof VANTA !== 'undefined' && typeof THREE !== 'undefined') {
+                VANTA.NET({
+                    el: "#hero-canvas",
+                    THREE: THREE,
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75, // Reduced for mobile performance
+                    color: 0x6CB6F5,       // Easwari Accent Blue
+                    backgroundColor: 0x2C3E50, // Easwari Prime Blue
+                    points: 8.00,          // Reduced from 12 for performance
+                    maxDistance: 20.00,    // Slightly reduced
+                    spacing: 22.00         // Increased for lighter effect
+                });
+            }
+        } catch (e) {
+            console.log("Vanta.js could not initialize:", e);
         }
 
-        /* Header shrink/shadow on scroll */
-        .header-scrolled {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* More intense shadow on scroll */
-            transition: all 0.3s ease-in-out;
-        }
+        // GSAP ScrollTrigger Animations
+        gsap.registerPlugin(ScrollTrigger);
 
-        /* NEW: Button hover background sweep */
-        .button-sweep:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: rgba(255,255,255,0.2); /* Light overlay for sweep effect */
-            transition: all 0.4s ease;
-            transform-origin: left;
-        }
-        .button-sweep:hover:after {
-            width: 100%;
-            transform: translateX(100%);
-        }
-        .button-sweep span {
-            position: relative;
-            z-index: 2; /* Keep text above sweep effect */
-        }
+        // Animate headers and sections
+        const animateTextElements = document.querySelectorAll('.animate-text');
+        animateTextElements.forEach(el => {
+            gsap.from(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 80%",
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out"
+            });
+        });
 
-        /* Optional subtle background pattern for hero */
-        .hero-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34.200785V42h-4v-8.033663C31.285642 33.729124 30.298816 33.62688 29.351299 33.649669 28.397686 33.672704 27.420658 33.793798 26.47164 34.020583 25.530364 34.245087 24.629392 34.56708 23.778817 34.980645 22.921319 35.397262 22.127885 35.908077 21.408796 36.505703 20.672322 37.100918 20 37.785002 19.349692 38.544716 18.679163 39.308253 18 40.106518 17.387994 40.925528 16.732924 41.761928 16.03759 42.607421 15.26786 43.435773 14.397834 44.204558 13.486828 44.89679 12.54562 45.471467 11.58309 45.918974 10.606352 46.216393 9.610515 46.34863 8.601004 46.309324 7.575971 46.096336 6.550604 45.71077 5.539828 45.155734 4.550186 44.437976 3.597147 43.568472 2.706176 42.56948 1.88451 41.446864 1.135064 40.20786 0.460144 38.859664 0 37.411628 0 35.872084 0 34.258385 0 32.58784 0 30.87034 0 29.117188 0 27.32049 0 25.480287 0 23.606716 0 21.700147 0 19.761066 0 17.789932 0 15.78726 0 13.753556 0 11.68931 0 9.594098 0 7.468494 0 5.312984 0 3.128125 0 0.914441 0 0h24v-4H0V0h24v34.200785L24 0zM42 34.200785V42h-4v-8.033663C37.285642 33.729124 36.298816 33.62688 35.351299 33.649669 34.397686 33.672704 33.420658 33.793798 32.47164 34.020583 31.530364 34.245087 30.629392 34.56708 29.778817 34.980645 28.921319 35.397262 28.127885 35.908077 27.408796 36.505703 26.672322 37.100918 26 37.785002 25.349692 38.544716 24.679163 39.308253 24 40.106518 23.387994 40.925528 22.732924 41.761928 22.03759 42.607421 21.26786 43.435773 20.397834 44.204558 19.486828 44.89679 18.54562 45.471467 17.58309 45.918974 16.606352 46.216393 15.610515 46.34863 14.601004 46.309324 13.575971 46.096336 12.550604 45.71077 11.539828 45.155734 10.550186 44.437976 9.597147 43.568472 8.706176 42.56948 7.88451 41.446864 7.135064 40.20786 6.460144 38.859664 6 37.411628 6 35.872084 6 34.258385 6 32.58784 6 30.87034 6 29.117188 6 27.32049 6 25.480287 6 23.606716 6 21.700147 6 19.761066 6 17.789932 6 15.78726 6 13.753556 6 11.68931 6 9.594098 6 7.468494 6 5.312984 6 3.128125 6 0.914441 6 0h24v-4H6V0h24v34.200785L30 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            background-size: 60px 60px;
-            opacity: 0.05;
-        }
-    </style>
+        // Stagger cards in services with 3D Flip effect (Optimized for Performance)
+        gsap.from(".service-card", {
+            scrollTrigger: {
+                trigger: "#services",
+                start: "top 70%",
+            },
+            y: 80,
+            rotationX: 25, // Reduced 3D rotation for smoother entry
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: "power3.out"
+            // Removed infinite floating animation for better performance
+        });
 
-    <!-- ======== Firebase SDKs START ======== -->
-    <script type="module">
-        // ** Firebase SDK Import & Configuration Area (Your Firebase Details) **
+        // About section reveal
+        gsap.from(".reveal-left", {
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top 75%",
+            },
+            x: -100,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power3.out"
+        });
 
-        // Your web app's Firebase configuration (PASTED DIRECTLY FROM YOUR INPUT)
-        const firebaseConfig = {
-            apiKey: "AIzaSyC1jrYHnTiW4E7kB4IJshGC1i47iSnhCk4",
-            authDomain: "office-website-696ce.firebaseapp.com",
-            projectId: "office-website-696ce",
-            storageBucket: "office-website-696ce.firebasestorage.app",
-            messagingSenderId: "881098201759",
-            appId: "1:881098201759:web:9ac5aec5cbca15bede60aa",
-            measurementId: "G-SQ3QZHVJ8Q"
+        gsap.from(".reveal-right", {
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top 75%",
+            },
+            x: 100,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power3.out"
+        });
+
+        // Hero Text Split Animation (using standard GSAP if split-type fails or simple fallback)
+        // For simplicity in this single file, let's just do a staggered fade up for hero
+        const tl = gsap.timeline();
+        tl.from(".hero-title", { y: 50, opacity: 0, duration: 1.2, ease: "power3.out", delay: 0.5 })
+            .from(".hero-tagline", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
+            .from(".hero-button", { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6");
+
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+
+        // Auto-open chat on load
+        Tawk_API.onLoad = function () {
+            Tawk_API.maximize();
         };
 
-        // Initialize Firebase app (using the version from your config)
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-        const app = initializeApp(firebaseConfig);
-
-        // Import other necessary Firebase services (ensure versions match 11.9.1)
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
-        import { getAuth, signInWithCustomToken, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
-
-        // Initialize Firebase Analytics (optional, based on your config)
-        const analytics = getAnalytics(app);
-
-        // --- Do NOT paste anything below this line for Firebase SDK setup ---
-
-        // This line determines the unique ID for your app's data in Firestore.
-        // If running in the Google Canvas environment, __app_id will be provided.
-        // For local disk, we'll use your Firebase Project ID as the appId.
-        const appId = typeof __app_id !== 'undefined' ? __app_id : firebaseConfig.projectId;
-
-        // Initialize Firebase services (these assume 'app' is already initialized from your pasted code)
-        const db = getFirestore(app);
-        const auth = getAuth(app);
-
-        // Sign in anonymously (required for Firestore rules to allow writing in local/non-Canvas env)
-        (async () => {
-            try {
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    // This path is for the Canvas environment (initial token provided by Canvas)
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                } else {
-                    // This path is for local execution or non-Canvas environments (anonymous sign-in)
-                    await signInAnonymously(auth);
-                }
-                console.log("Firebase initialized and user signed in successfully.");
-            } catch (error) {
-                console.error("Error signing in to Firebase:", error);
-                // Optionally, display an error message to the user if auth fails
-            }
-        })();
-
-        // Make Firebase instances globally available for the form submission script
-        // This is important because the form's script runs outside the module scope
-        window.db = db;
-        window.auth = auth;
-        window.appId = appId;
-        // Make collection and addDoc globally available as well
-        window.collection = collection;
-        window.addDoc = addDoc;
-    </script>
-    <!-- ======== Firebase SDKs END ======== -->
-
-    <!-- ======== EmailJS SDKs START ======== -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // Your EmailJS Public Key
-            // IMPORTANT: If you still get "Account not found" error,
-            // please re-verify this key from your EmailJS Account Dashboard -> API Keys
-            // and replace "ux-r6yJDR4o1U1NYY" with your actual, correct Public Key.
-            emailjs.init({
-                publicKey: "ux-r6yJDR40lU1NYY", // REPLACE THIS WITH YOUR ACTUAL PUBLIC KEY
-            });
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69674303a7b5291979189e74/1jetlrhns';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
-    <!-- ======== EmailJS SDKs END ======== -->
-
-</head>
-<body class="antialiased">
-
-    <!-- Header Section -->
-    <header id="main-header" class="bg-white shadow-lg py-6 sticky top-0 z-50 section-depth transition-all duration-300 ease-in-out">
-        <nav class="container mx-auto flex justify-between items-center px-8 md:px-12">
-            <!-- Logo Placeholder -->
-            <div class="text-3xl md:text-4xl font-extrabold text-easwari-prime tracking-wide flex items-center">
-                <!-- Placeholder for your actual logo SVG/Image -->
-                <svg class="w-9 h-9 md:w-10 md:h-10 mr-4 text-easwari-accent" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zM12 13a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-                EASWARI ASSOCIATES
-            </div>
-            <ul class="hidden md:flex space-x-12">
-                <li><a href="#home" class="text-gray-700 hover:text-easwari-prime font-semibold text-xl py-2 transition duration-300 relative group">Home<span class="absolute bottom-0 left-0 w-full h-0.5 bg-easwari-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
-                <li><a href="#services" class="text-gray-700 hover:text-easwari-prime font-semibold text-xl py-2 transition duration-300 relative group">Services<span class="absolute bottom-0 left-0 w-full h-0.5 bg-easwari-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
-                <li><a href="#about" class="text-gray-700 hover:text-easwari-prime font-semibold text-xl py-2 transition duration-300 relative group">About Us<span class="absolute bottom-0 left-0 w-full h-0.5 bg-easwari-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
-                <li><a href="#contact" class="text-gray-700 hover:text-easwari-prime font-semibold text-xl py-2 transition duration-300 relative group">Contact Us<span class="absolute bottom-0 left-0 w-full h-0.5 bg-easwari-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
-            </ul>
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-easwari-accent rounded-md p-3">
-                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl py-4 mt-2 mx-6 rounded-xl section-depth">
-            <ul class="flex flex-col space-y-4 px-8">
-                <li><a href="#home" class="block text-gray-800 hover:bg-gray-100 rounded-md py-3 px-4 text-lg font-medium">Home</a></li>
-                <li><a href="#services" class="block text-gray-800 hover:bg-gray-100 rounded-md py-3 px-4 text-lg font-medium">Services</a></li>
-                <li><a href="#about" class="block text-gray-800 hover:bg-gray-100 rounded-md py-3 px-4 text-lg font-medium">About Us</a></li>
-                <li><a href="#contact" class="block text-gray-800 hover:bg-gray-100 rounded-md py-3 px-4 text-lg font-medium">Contact Us</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="bg-gradient-easwari text-white py-40 md:py-64 rounded-b-[7rem] overflow-hidden relative">
-            <!-- Background Image Placeholder (will be replaced by actual image) -->
-            <div class="absolute inset-0 z-0 bg-cover bg-center opacity-10" style="background-image: url('https://placehold.co/1920x1080/2C3E50/6CB6F5?text=Financial+Elegance');"></div>
-            <!-- Subtle background pattern for texture -->
-            <div class="absolute inset-0 z-0 hero-pattern"></div>
-
-            <div class="container mx-auto text-center px-8 relative z-10">
-                <h1 class="text-6xl md:text-8xl font-extrabold leading-tight mb-8 drop-shadow-2xl hero-title">
-                    EASWARI ASSOCIATES
-                </h1>
-                <p class="text-2xl md:text-3xl mb-14 max-w-5xl mx-auto opacity-90 font-light hero-tagline">
-                    “Here Trust Meets Tireless Precision.”
-                </p>
-                <a href="#contact" class="bg-white text-easwari-prime hover:bg-gray-100 font-bold py-5 px-16 rounded-full shadow-2xl transition duration-500 ease-in-out transform hover:scale-105 inline-block text-2xl group relative overflow-hidden button-sweep">
-                    <span class="relative z-10">Schedule a Consultation Today</span>
-                    <span class="absolute inset-0 bg-easwari-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-32 md:py-48 bg-white section-depth mt-24 rounded-3xl mx-8 lg:mx-auto max-w-screen-2xl">
-            <div class="container mx-auto px-8">
-                <h2 class="text-5xl md:text-6xl font-extrabold text-center text-easwari-prime mb-20 animate-on-scroll">Our Specialized Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
-                    <!-- Service Card 1: Comprehensive Audit & Assurance -->
-                    <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20 animate-on-scroll">
-                        <div class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="10" y2="9"></line></svg>
-                        </div>
-                        <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Comprehensive Audit & Assurance</h3>
-                        <p class="text-gray-700 text-center leading-relaxed text-lg">
-                            Ensuring the absolute financial integrity and regulatory compliance of your enterprise through meticulous, independent auditing. We provide in-depth analysis and insightful assurance, fostering trust and clarity in your financial statements.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 2: Strategic Tax Advisory & Comprehensive Filings -->
-                    <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20 animate-on-scroll">
-                        <div class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5z"></path><polyline points="12 8 8 12 11 15 16 10 12 6"></polyline></svg>
-                        </div>
-                        <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Strategic Tax Advisory & Comprehensive Filings</h3>
-                        <p class="text-gray-700 text-center leading-relaxed text-lg">
-                            Navigate the complexities of taxation with our expert guidance. We offer proactive tax planning, meticulous preparation for Income Tax (IT), Goods and Services Tax (GST), and TDS filings, designed to optimize your financial liabilities and maximize legitimate returns efficiently.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 3: Business & Financial Consulting -->
-                    <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20 animate-on-scroll">
-                        <div class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15h.01"></path><path d="M7 19h10"></path><path d="M22 17H2"></path><path d="M12 12V2L4 5v7c0 4.28 1.97 8.23 6.5 10C17 20.23 19 16.28 19 12V5l-8-3Z"></path></svg>
-                        </div>
-                        <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Business & Financial Consulting</h3>
-                        <p class="text-gray-700 text-center leading-relaxed text-lg">
-                            Unlock your business's full potential with our bespoke financial consulting. We provide strategic insights, actionable advice, and tailored solutions to enhance profitability, optimize operations, and secure long-term financial stability and growth.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 4: Invoice & E-Way Bill Management -->
-                    <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20 animate-on-scroll">
-                        <div class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="8" y1="9" x2="8" y2="9"></line></svg>
-                        </div>
-                        <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Invoice & E-Way Bill Management</h3>
-                        <p class="text-gray-700 text-center leading-relaxed text-lg">
-                            Simplify your financial operations with our precise invoice and E-Way Bill management. We ensure seamless processing, stringent compliance, and efficient logistics, allowing you to focus on your core business without administrative burdens.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 5: Software-Specific Filings (Tally & Winman) -->
-                    <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20 animate-on-scroll">
-                        <div class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7.55"></path><path d="M12 8v4l3 2"></path></svg>
-                        </div>
-                        <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Software-Specific Filings (Tally & Winman)</h3>
-                        <p class="text-gray-700 text-center leading-relaxed text-lg">
-                            As a professional center for Tally and Winman related filings, we provide unparalleled expertise. Our meticulous approach ensures accurate, timely, and fully compliant submissions, streamlining your statutory requirements with precision.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 6: Aadhaar & PAN Services -->
-                    <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20 animate-on-scroll">
-                        <div class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                        </div>
-                        <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">Aadhaar & PAN Services</h3>
-                        <p class="text-gray-700 text-center leading-relaxed text-lg">
-                            Facilitating seamless Aadhaar and PAN card services, including new applications, updates, and comprehensive documentation support for both individuals and businesses, ensuring your essential identifications are always in order.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 7: LIC Insurance Advisory -->
-                    <div class="bg-gradient-light-easwari p-12 rounded-2xl service-card border-2 border-easwari-accent/20 animate-on-scroll">
-                        <div class="text-easwari-prime text-6xl mb-8 text-center bg-easwari-accent/10 p-6 rounded-full w-32 h-32 flex items-center justify-center mx-auto shadow-inner border border-easwari-accent/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                        </div>
-                        <h3 class="text-3xl font-bold text-easwari-prime mb-5 text-center leading-tight">LIC Insurance Advisory</h3>
-                        <p class="text-gray-700 text-center leading-relaxed text-lg">
-                            Secure your future with confident decisions on LIC insurance. Our expert advisory helps you understand various policies, align them with your financial goals, and choose optimal coverage for lasting peace of mind.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="py-32 md:py-48 bg-F0F4F8 section-depth rounded-3xl mx-8 lg:mx-auto max-w-screen-2xl mt-24">
-            <div class="container mx-auto px-8 flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2 animate-on-scroll">
-                    <!-- Image placeholder for professional office/team -->
-                    <img src="https://placehold.co/1000x750/2C3E50/6CB6F5?text=Strategic+Vision" alt="About Us - Strategic Vision" class="rounded-3xl shadow-xl w-full h-auto object-cover border-4 border-white transform hover:scale-[1.01] transition-transform duration-500 ease-in-out">
-                </div>
-                <div class="md:w-1/2 animate-on-scroll">
-                    <h2 class="text-5xl md:text-6xl font-extrabold text-easwari-prime mb-10">About EASWARI ASSOCIATES</h2>
-                    <p class="text-gray-700 leading-relaxed text-xl mb-6">
-                        At EASWARI ASSOCIATES, we embody our tagline: “Here Trust Meets Tireless Precision.” With over <span class="font-extrabold text-easwari-prime">20 years of dedicated experience</span>, our firm is founded on the principles of unwavering commitment, meticulous attention to detail, and a relentless pursuit of client success.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed text-xl mb-6">
-                        Our highly qualified team comprises seasoned professionals who are passionate about delivering timely and efficient solutions. We pride ourselves on our deep understanding of financial intricacies and our ability to provide precise, actionable advice.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed text-xl">
-                        We believe in building lasting relationships through transparency and exceptional service, ensuring every client receives personalized and effective financial guidance.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="py-32 md:py-48 bg-gradient-easwari text-white text-center rounded-3xl mx-8 lg:mx-auto max-w-screen-2xl mt-24 section-depth">
-            <div class="container mx-auto px-8 animate-on-scroll">
-                <h2 class="text-5xl md:text-6xl font-extrabold mb-12 drop-shadow-2xl">
-                    Ready to Optimize Your Financial Future?
-                </h2>
-                <p class="text-2xl md:text-3xl max-w-5xl mx-auto mb-16 font-light opacity-90">
-                    Partner with EASWARI ASSOCIATES for expert guidance and achieve your financial objectives with confidence and precision.
-                </p>
-                <a href="#contact" class="bg-white text-easwari-prime hover:bg-gray-100 font-bold py-5 px-16 rounded-full shadow-2xl transition duration-500 ease-in-out transform hover:scale-105 inline-block text-2xl group relative overflow-hidden button-sweep">
-                    <span class="relative z-10">Connect With Our Experts</span>
-                    <span class="absolute inset-0 bg-easwari-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Contact Us Section -->
-        <section id="contact" class="py-32 md:py-48 bg-white rounded-3xl mx-8 lg:mx-auto max-w-screen-2xl mt-24 section-depth mb-24">
-            <div class="container mx-auto px-8">
-                <h2 class="text-5xl md:text-6xl font-extrabold text-center text-easwari-prime mb-20 animate-on-scroll">Connect With EASWARI ASSOCIATES</h2>
-                <div class="max-w-6xl mx-auto bg-gray-50 p-12 md:p-16 rounded-3xl shadow-xl border border-gray-100 animate-on-scroll">
-                    <form id="contactForm" class="space-y-10">
-                        <div>
-                            <label for="name" class="block text-gray-800 text-xl font-medium mb-4">Your Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm placeholder-gray-500" placeholder="e.g., Jane Doe" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-800 text-xl font-medium mb-4">Your Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm placeholder-gray-500" placeholder="your.email@example.com" required>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-gray-800 text-xl font-medium mb-4">Phone Number (Optional)</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm placeholder-gray-500" placeholder="e.g., +91 98765 43210">
-                        </div>
-                        <div>
-                            <label for="service" class="block text-gray-800 text-xl font-medium mb-4">Service of Interest</label>
-                            <select id="service" name="service" class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm bg-white cursor-pointer">
-                                <option value="">Select a Service</option>
-                                <option value="audit">Comprehensive Audit & Assurance</option>
-                                <option value="tax">Strategic Tax Advisory & Comprehensive Filings</option>
-                                <option value="consulting">Business & Financial Consulting</option>
-                                <option value="invoice-eway">Invoice & E-Way Bill Management</option>
-                                <option value="software-filings">Software-Specific Filings (Tally & Winman)</option>
-                                <option value="aadhaar-pan">Aadhaar & PAN Services</option>
-                                <option value="lic-insurance">LIC Insurance Advisory</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-800 text-xl font-medium mb-4">Your Message</label>
-                            <textarea id="message" name="message" rows="8" class="w-full px-7 py-4 border border-gray-300 rounded-lg focus:ring-easwari-accent focus:border-easwari-accent transition duration-200 text-xl shadow-sm placeholder-gray-500" placeholder="Tell us about your specific financial needs or questions..." required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-easwari-prime text-white font-bold py-5 px-12 rounded-lg hover:bg-easwari-prime-dark transition duration-400 ease-in-out transform hover:scale-105 shadow-xl text-2xl group relative overflow-hidden button-sweep">
-                            <span class="relative z-10">Send Your Inquiry</span>
-                            <span class="absolute inset-0 bg-easwari-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
-                        </button>
-                    </form>
-                    <div id="form-message" class="mt-12 text-center text-xl font-semibold hidden"></div>
-                </div>
-
-                <div class="mt-28 text-center animate-on-scroll">
-                    <p class="text-3xl text-gray-700 mb-10 font-medium">Or reach us directly via:</p>
-                    <p class="text-5xl font-extrabold text-easwari-prime mb-8">
-                        Phone: <a href="tel:+919894132998" class="hover:underline hover:text-easwari-accent transition-colors duration-300">+91 9894132998</a>, <a href="tel:+919380975940" class="hover:underline hover:text-easwari-accent transition-colors duration-300">+91 9380975940</a>
-                    </p>
-                    <p class="text-5xl font-extrabold text-easwari-prime mb-8">
-                        Email: <a href="mailto:auditorppm24@gmail.com" class="hover:underline hover:text-easwari-accent transition-colors duration-300">auditorppm24@gmail.com</a>, <a href="mailto:easwariassociates@gmail.com" class="hover:underline hover:text-easwari-accent transition-colors duration-300">easwariassociates@gmail.com</a>
-                    </p>
-                    <p class="text-2xl text-gray-600 mt-12 leading-relaxed max-w-3xl mx-auto">
-                        <span class="font-bold text-gray-800">Visit Our Office:</span><br>
-                        23/1, Canara Bank 1st Floor, Sangakiri Main Road,<br>
-                        Pallipalayam - 638006, Tamil Nadu, India.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-14 rounded-t-[7rem]">
-        <div class="container mx-auto text-center px-8">
-            <div class="mb-10 flex justify-center space-x-10">
-                <!-- Only Facebook Icon -->
-                <a href="YOUR_FACEBOOK_PAGE_URL" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-easwari-accent transform hover:scale-150 transition-transform duration-300">
-                    <svg class="inline-block w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10Z" clip-rule="evenodd" /></svg>
-                </a>
-            </div>
-            <p class="text-gray-400 text-base md:text-lg leading-relaxed">&copy; 2025 EASWARI ASSOCIATES. All Rights Reserved. <span class="font-bold text-easwari-accent">Crafted with Unwavering Precision.</span></p>
-        </div>
-    </footer>
-
-    <script>
-        // Form submission handling with Firebase and EmailJS
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const formMessage = document.getElementById('form-message');
-            formMessage.classList.remove('hidden', 'text-green-600', 'text-red-600');
-            formMessage.classList.add('text-gray-700');
-            formMessage.textContent = 'Sending your message...';
-
-            // Collect form data
-            const formData = {
-                name: this.name.value,
-                email: this.email.value,
-                phone: this.phone.value,
-                service: this.service.value,
-                message: this.message.value,
-                timestamp: new Date().toISOString()
-            };
-
-            // YOUR ACTUAL EMAILJS SERVICE ID AND TEMPLATE ID
-            const serviceId = 'service_yjztyb9';   // <-- YOUR SERVICE ID
-            const templateId = 'template_e2n18gl'; // <-- YOUR TEMPLATE ID
-
-            try {
-                // 1. Store in Firebase Firestore
-                // Check if Firebase is available and authenticated before attempting to write
-                if (window.db && window.auth && window.auth.currentUser && window.collection && window.addDoc) {
-                    const userId = window.auth.currentUser.uid;
-                    // window.appId is set in the module script based on Firebase projectId or Canvas __app_id
-                    const collectionPath = `artifacts/${window.appId}/users/${userId}/contact_submissions`;
-                    await window.addDoc(window.collection(window.db, collectionPath), formData); // Use addDoc and collection from window scope
-                    console.log("Form data successfully written to Firestore!");
-                } else {
-                    console.warn("Firebase (Firestore/Auth/collection/addDoc) not fully initialized or user not authenticated. Skipping Firestore save. This can happen during local file:// testing or if setup is incomplete.");
-                    // Still attempt to send email if Firebase is not ready, as it's a separate service.
-                }
-
-                // 2. Send email via EmailJS (CORRECTED PARAMETER NAMES)
-                await emailjs.send(serviceId, templateId, {
-                    name: formData.name, // Changed from from_name to name
-                    email: formData.email, // Changed from from_email to email
-                    phone: formData.phone, // Changed from phone_number to phone
-                    service: formData.service, // Changed from service_of_interest to service
-                    message: formData.message,
-                    timestamp: formData.timestamp, // Added timestamp
-                    to_name: "EASWARI ASSOCIATES" // You can set a specific recipient name
-                });
-                console.log("Email successfully sent via EmailJS!");
-
-                formMessage.classList.remove('text-gray-700');
-                formMessage.classList.add('text-green-600');
-                formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-                this.reset(); // Clear the form
-            } catch (error) {
-                console.error("Error submitting form:", error);
-                formMessage.classList.remove('text-gray-700');
-                formMessage.classList.add('text-red-600');
-                formMessage.textContent = 'Error sending message. Please try again or contact us directly.';
-            }
-        });
-
-        // Other existing JS for smooth scroll, mobile menu, animations
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const headerOffset = document.querySelector('header').offsetHeight;
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                    const offsetPosition = elementPosition - headerOffset - 30;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-                if (window.innerWidth < 768) {
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                }
-            });
-        });
-
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        });
-        animateElements.forEach(element => {
-            observer.observe(element);
-        });
-
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 80) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        });
-    </script>
+    <!--End of Tawk.to Script-->
 </body>
+
 </html>
