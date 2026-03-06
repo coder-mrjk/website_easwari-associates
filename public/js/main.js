@@ -378,13 +378,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         msg.style.color = 'var(--text-mid)';
         msg.textContent = 'Sending your message...';
 
+        const now = new Date();
+        const dateOptions = { timeZone: 'Asia/Kolkata', day: '2-digit', month: '2-digit', year: 'numeric' };
+        const timeOptions = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+        const formattedDate = new Intl.DateTimeFormat('en-GB', dateOptions).format(now);
+        let formattedTime = new Intl.DateTimeFormat('en-US', timeOptions).format(now).toUpperCase();
+        // Fallback for some browsers that insert spaces like " PM"
+        formattedTime = formattedTime.replace('\u202F', ' ');
+
         const formData = {
             name: form.querySelector('#name').value,
             email: form.querySelector('#email').value,
             phone: form.querySelector('#phone').value,
             service: form.querySelector('#service').value,
             message: form.querySelector('#message').value,
-            timestamp: new Date().toISOString()
+            timestamp: `${formattedDate} at ${formattedTime} IST`
         };
 
         const serviceId = 'service_yjztyb9';
@@ -392,10 +400,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         try {
             // Firebase Firestore save
-            if (window.db && window.auth && window.auth.currentUser && window.collection && window.addDoc) {
-                const userId = window.auth.currentUser.uid;
-                const path = 'artifacts/' + window.appId + '/users/' + userId + '/contact_submissions';
+            if (window.db && window.collection && window.addDoc) {
+                const path = 'contact_submissions';
                 await window.addDoc(window.collection(window.db, path), formData);
+            }
+
+            // Google Sheets Integration via Google Apps Script Web App
+            // IMPORTANT: Replace the URL below with your actual deployed Web App URL
+            const appsScriptUrl = "https://script.google.com/macros/s/AKfycbzQ8T0SITcvDPYgGMPPfGq5qtC0YViBfTP_CW7ezq6WES8cPgPVWFHdUoDPYwZ5vI4lCw/exec";
+            if (appsScriptUrl !== "YOUR_NEW_WEB_APP_URL_HERE") {
+                try {
+                    await fetch(appsScriptUrl, {
+                        method: "POST",
+                        body: JSON.stringify(formData),
+                        headers: {
+                            'Content-Type': 'text/plain;charset=utf-8',
+                        }
+                    });
+                } catch (sheetError) {
+                    console.warn("Failed to save to Google Sheets:", sheetError);
+                }
             }
 
             // EmailJS send
